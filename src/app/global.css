@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), sans-serif;
+
+  /* Jesea Handmade */
+
+  --color-brand-primary: #0EA5E9;
+  --color-brand-primary-dark: #0284C7;
+
+  --color-brand-bg: #FAF6F1;
+  --color-brand-surface: #FFFFFF;
+
+  --color-brand-border: #E5E7EB;
+
+  --color-brand-text: #1E293B;
+  --color-brand-text-light: #64748B;
+
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoom-out-slow {
+    from {
+      transform: scale(1.08);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes reveal-left {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+
+/* Custom global styles for Antd styling alignment */
+.ant-btn-primary {
+  box-shadow: none !important;
+}
+
+.ant-card {
+  background-color: #ffffff !important;
+  border-radius: 4px !important;
+}
+
+/* Animation Delay Utilities */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Accessibility: Support Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  color: #1E293B;
+}
